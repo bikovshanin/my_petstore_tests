@@ -1,4 +1,5 @@
 import pytest
+
 from data.user_data import new_user, updated_user
 
 
@@ -29,7 +30,6 @@ class TestUserAPI:
             response_get.json()['username'] == new_user['username'],
             'User username does not match.'
         )
-
 
     def test_get_user_by_username(self, client):
         """
